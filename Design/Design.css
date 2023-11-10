@@ -1,0 +1,606 @@
+/*
+    Minha Paleta de Cores
+
+    Azul:#0817ff - Minha cor principal. Minha Justificativa para usar esta cor vem pela psicologia das cores, que traz o azul como a cor relacionada à tecnologia; e essa tonalidade específica traz liberdade, algo mais alegre.
+    Preto:#1F1F1F
+    Cinza:#C2C2C2
+    Branco-Cinza:transparentEEE
+
+*/
+@charset "utf-8";
+
+    /*      Fontes da Logo      */
+
+@font-face {
+    font-family:Header;
+    src: url('../Mídias/Fontes/Fontes Display/Bangers-Regular.ttf');
+}
+@font-face{
+    font-family:Header2;
+    src:url('../Mídias/Fontes/Fontes Display/LuckiestGuy-Regular.ttf');
+}
+@font-face{
+    font-family:Header3;
+    src:url('../Mídias/Fontes/Fontes Display/Zatiyan.ttf');
+}
+
+    /*      Fontes do Conteúdo      */
+
+@font-face{
+    font-family:Barlow;
+    src:url('../Mídias/Fontes/Fontes Sans-Serif/Barlow/Barlow-Thin.ttf');
+    font-weight:100;
+}
+@font-face{
+    font-family:Barlow;
+    src:url('../Mídias/Fontes/Fontes Sans-Serif/Barlow/Barlow-ExtraLight.ttf');
+    font-weight:200;
+}
+@font-face{
+    font-family:Barlow;
+    src:url('../Mídias/Fontes/Fontes Sans-Serif/Barlow/Barlow-Light.ttf');
+    font-weight:300;
+}
+@font-face{
+    font-family:Barlow;
+    src:url('../Mídias/Fontes/Fontes Sans-Serif/Barlow/Barlow-Regular.ttf');
+    font-weight:400;
+}
+@font-face{
+    font-family:Barlow;
+    src:url('../Mídias/Fontes/Fontes Sans-Serif/Barlow/Barlow-Medium.ttf');
+    font-weight:500;
+}
+@font-face{
+    font-family:Barlow;
+    src:url('../Mídias/Fontes/Fontes Sans-Serif/Barlow/Barlow-SemiBold.ttf');
+    font-weight:600;
+}
+@font-face{
+    font-family:Barlow;
+    src:url('../Mídias/Fontes/Fontes Sans-Serif/Barlow/Barlow-Bold.ttf');
+    font-weight:700;
+}
+@font-face{
+    font-family:Barlow;
+    src:url('../Mídias/Fontes/Fontes Sans-Serif/Barlow/Barlow-ExtraBold.ttf');
+    font-weight:800;
+}
+@font-face{
+    font-family:Barlow;
+    src:url('../Mídias/Fontes/Fontes Sans-Serif/Barlow/Barlow-Black.ttf');
+    font-weight:900;
+}
+
+    /*      "Reset de Navegador"     */
+
+*{
+    padding:0px;
+    margin:0px;
+    border:0px;
+    box-sizing:border-box;
+    font-family:Barlow;
+    font-size:1em;
+    font-weight:400;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+    /*      Edição do Body      */
+
+body{
+    width:100%;
+    height:100%;
+    background-color:#eee;
+    padding-top:80px;
+}
+abbr{
+    text-decoration:none;
+}
+
+    /*      Menu        */
+
+header{
+    width:100%;
+    height:80px;
+    background-color:#0817ff;
+    padding-top:20px;
+    display:flex;
+    position:fixed;
+    top:0px;
+}
+.logo{
+    width:40%;
+}
+.logo a{
+    text-decoration:none;
+    font-size:2.5em;
+    color:white;
+    margin-left:20%;
+    font-family:Header,Header2,Header3,cursive;
+}
+.navegacao{
+    width:60%;
+}
+.navegacao nav{
+    width:100%;
+}
+.navegacao ul{
+    list-style:none;
+    font-size:1.6em;
+    width:100%;
+    display:flex;
+}
+.navegacao a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+.navegacao ul>li{
+    font-weight:600;
+    color:white;
+    margin-right:6%;
+}
+.navegacao ul>li>a:hover{
+    color:#4b57ff;
+}
+.navegacao ul>li:hover ol{
+    display:block;
+}
+.subnavegacao{
+    display:none;
+    background-color:#0817ff;
+    padding:1%;
+    list-style:none;
+    width:100%;
+    position:relative;
+    text-align:center;
+}
+.subnavegacao a{
+    font-size:0.7em;
+    display:block;
+    padding:4% 5%;
+    width:100%;
+    border-bottom:0.8px solid rgba(0, 0, 0, 0.493);
+    position:relative;
+}
+.subnavegacao a:hover{
+    background-color:#0210da;
+    color:#505cff;
+}
+
+    /*      Banner      */
+
+.banner{
+    width:100%;
+    height:550px;
+    background-image:url('../Mídias/Imagens/Banner/Background.jpg');
+    background-repeat:no-repeat;
+}
+.banner>div{
+    width:100%;
+    height:100%;
+    border:40px dashed #ff3300;
+    background-image:url('../Mídias/Imagens/Banner/Click.png'),url('../Mídias/Imagens/Banner/Codificacao.png'),url('../Mídias/Imagens/Banner/Fama.png'),url('../Mídias/Imagens/Banner/Legal.png'),url('../Mídias/Imagens/Banner/Codificacao.png'),url('../Mídias/Imagens/Banner/V.png'),url('../Mídias/Imagens/Banner/Fama.png'),url('../Mídias/Imagens/Banner/Click.png');
+    background-repeat:no-repeat;
+    background-position:top left,bottom left,center left,top,top right,bottom,center right,bottom right;
+    background-size:8%;
+    background-clip:padding-box;
+    animation-name:Banner,Banner1;
+    animation-duration:8s,4s;
+    animation-timing-function:linear,ease-in-out;
+    animation-iteration-count:infinite;
+}
+@keyframes Banner{
+    from{
+        background-image:url('../Mídias/Imagens/Banner/Click.png'),url('../Mídias/Imagens/Banner/Codificacao.png'),url('../Mídias/Imagens/Banner/Fama.png'),url('../Mídias/Imagens/Banner/Legal.png'),url('../Mídias/Imagens/Banner/Codificacao.png'),url('../Mídias/Imagens/Banner/V.png'),url('../Mídias/Imagens/Banner/Fama.png'),url('../Mídias/Imagens/Banner/Click.png');
+    }
+    10%{
+        background-image:none;
+    }
+    20%{
+        background-image:url('../Mídias/Imagens/Banner/Codificacao.png'),url('../Mídias/Imagens/Banner/Click.png'),url('../Mídias/Imagens/Banner/V.png'),url('../Mídias/Imagens/Banner/Rock.png'),url('../Mídias/Imagens/Banner/Click.png'),url('../Mídias/Imagens/Banner/Rock.png'),url('../Mídias/Imagens/Banner/V.png'),url('../Mídias/Imagens/Banner/Codificacao.png');
+    }
+    30%{
+        background-image:none;
+    }
+    40%{
+        background-image:url('../Mídias/Imagens/Banner/Rock.png'),url('../Mídias/Imagens/Banner/Rock.png'),url('../Mídias/Imagens/Banner/Click.png'),url('../Mídias/Imagens/Banner/Legal.png'),url('../Mídias/Imagens/Banner/Rock.png'),url('../Mídias/Imagens/Banner/Legal.png'),url('../Mídias/Imagens/Banner/Click.png'),url('../Mídias/Imagens/Banner/Rock.png');
+    }
+    50%{
+        background-image:none;
+    }
+    60%{
+        background-image:url('../Mídias/Imagens/Banner/Rock.png'),url('../Mídias/Imagens/Banner/Rock.png'),url('../Mídias/Imagens/Banner/Mão.png'),url('../Mídias/Imagens/Banner/Legal.png'),url('../Mídias/Imagens/Banner/Rock.png'),url('../Mídias/Imagens/Banner/Legal.png'),url('../Mídias/Imagens/Banner/Mão.png'),url('../Mídias/Imagens/Banner/Rock.png');
+    }
+    70%{
+        background-image:none;
+    }
+    80%{
+        background-image:url('../Mídias/Imagens/Banner/Mão.png'),url('../Mídias/Imagens/Banner/Fama.png'),url('../Mídias/Imagens/Banner/Codificacao.png'),url('../Mídias/Imagens/Banner/Click.png'),url('../Mídias/Imagens/Banner/Fama.png'),url('../Mídias/Imagens/Banner/Click.png'),url('../Mídias/Imagens/Banner/Codificacao.png'),url('../Mídias/Imagens/Banner/Mão.png');
+    }
+    90%{
+        background-image:none;
+    }
+    to{
+        background-image:url('../Mídias/Imagens/Banner/Click.png'),url('../Mídias/Imagens/Banner/Codificacao.png'),url('../Mídias/Imagens/Banner/Fama.png'),url('../Mídias/Imagens/Banner/Legal.png'),url('../Mídias/Imagens/Banner/Codificacao.png'),url('../Mídias/Imagens/Banner/V.png'),url('../Mídias/Imagens/Banner/Fama.png'),url('../Mídias/Imagens/Banner/Click.png');
+    }
+}
+@keyframes Banner1{
+    from{
+        border-top:40px dashed #ff3300;
+        border-right:40px dashed #ff3300;
+        border-bottom:40px dashed transparent;
+        border-left:40px dashed transparent;
+    }
+    5%{
+        border-top:40px dashed transparent;
+        border-right:40px dashed #ff3300;
+        border-bottom:40px dashed #ff3300;
+        border-left:40px dashed transparent;
+    }
+    15%{
+        border-top:40px dashed transparent;
+        border-right:40px dashed transparent;
+        border-bottom:40px dashed #ff3300;
+        border-left:40px dashed #ff3300;
+    }
+    25%{
+        border-top:40px dashed #ff3300;
+        border-right:40px dashed transparent;
+        border-bottom:40px dashed transparent;
+        border-left:40px dashed #ff3300;
+    }
+    35%{
+        border-top:40px dashed #ff3300;
+        border-right:40px dashed #ff3300;
+        border-bottom:40px dashed transparent;
+        border-left:40px dashed transparent;
+    }
+    45%{
+        border-top:40px dashed transparent;
+        border-right:40px dashed #ff3300;
+        border-bottom:40px dashed #ff3300;
+        border-left:40px dashed transparent;
+    }
+    55%{
+        border-top:40px dashed transparent;
+        border-right:40px dashed transparent;
+        border-bottom:40px dashed #ff3300;
+        border-left:40px dashed #ff3300;
+    }
+    65%{
+        border-top:40px dashed #ff3300;
+        border-right:40px dashed transparent;
+        border-bottom:40px dashed transparent;
+        border-left:40px dashed #ff3300;
+    }
+    75%{
+        border-top:40px dashed #ff3300;
+        border-right:40px dashed #ff3300;
+        border-bottom:40px dashed transparent;
+        border-left:40px dashed transparent;
+    }
+    85%{
+        border-top:40px dashed transparent;
+        border-right:40px dashed #ff3300;
+        border-bottom:40px dashed #ff3300;
+        border-left:40px dashed transparent;
+    }
+    95%{
+        border-top:40px dashed transparent;
+        border-right:40px dashed transparent;
+        border-bottom:40px dashed #ff3300;
+        border-left:40px dashed #ff3300;
+    }
+    to{
+        border-top:40px dashed #ff3300;
+        border-right:40px dashed #ff3300;
+        border-bottom:40px dashed transparent;
+        border-left:40px dashed transparent;
+    }
+}
+.bannerlogo{
+    width:100%;
+    height:50%;
+    margin:auto;
+    line-height:400px;
+    background-color:transparent;
+    color:black;
+    font-size:8.5em;
+    font-family:Header2;
+}
+
+    /*      Conteúdo Principal       */
+
+main{
+    width:85%;
+    min-height:2000px;
+    height:100%;
+    background-color:white;
+    margin:auto;
+    padding:20px 1% 1% 1%;
+    box-shadow:30px 30px 30px 10px rgba(0, 0, 0, 0.171);
+}
+
+    /*      Módulo 1        */
+
+
+    /*      Configurações Gerais        */
+
+h1{
+    padding:5px;
+    background-color:#0817ff;
+    color:white;
+    text-align:center;
+    font-size:2em;
+    font-weight:900;
+}
+.desafio{
+    padding:2%;
+    margin-top:10px;
+    width:100%;
+    height:100%;
+    text-align:center;
+}
+.desafio>div{
+    width:90%;
+    margin:auto;
+}
+.desafio>h2{
+    margin-bottom:15px;
+    text-align:center;
+    background-color:rgb(255, 166, 0);
+    color:white;
+    font-size:1.8em;
+    font-weight:800;
+}
+.desafio>div>h3{
+    margin-bottom:15px;
+    font-size:1.6em;
+    font-weight:700;
+}
+.desafio p{
+    text-align:justify;
+    margin:0px 15%;
+}
+h4{
+    font-size:1.4em;
+    font-weight:600;
+    margin-bottom:15px;
+}
+h5{
+    font-size:1.3em;
+    font-weight:500;
+    margin:10px 0px;
+}
+
+    /*      Desafio 1       */
+
+.desafio1{
+    width:100%;
+    display:flex;
+    padding:0px 10%;
+}
+.desafio1part2{
+    width:calc(100% / 2);
+}
+.desafio1part2part2>p{
+    text-align:right;
+    direction:rtl;
+}
+
+    /*      Desafio 4       */
+
+.listaemoji{
+    margin-top:20px;
+}
+.lista{
+    width:50%;
+    height:100%;
+    display:inline-block;
+    margin-left:-4px;
+    border:4px double black;
+    padding-bottom:10px;
+}
+.lista h5{
+    background-color:#6731da;
+    color:rgb(221, 212, 212);
+    width:100%;
+}
+.lista ul{
+    height:inherit;
+    padding-left:30%;
+    list-style-position:inside;
+    list-style-type:square;
+}
+.lista li{
+    font-weight:500;
+    text-align:justify;
+}
+
+    /*      Desafio 5       */
+
+.sobremim{
+    width:60%;
+    display:block;
+    text-decoration:none;
+    color:white;
+    background-color:#6731da;
+    margin:20px auto 0px auto;
+    font-weight:600;
+    font-size:1.4em;
+    padding:1%;
+    border:1px solid rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    box-shadow:0px 8px rgba(0, 0, 0, 0.2);
+}
+.sobremim:hover{
+    background-color:#5b2cbe;
+}
+.sobremim:active{
+    transform:translatey(10%);
+    box-shadow:0px 4px rgba(0,0,0,0.2);
+}
+
+    /*      Desafio 6       */
+
+table{
+    width:100%;
+    border:1px solid black;
+    margin:20px 0px;
+}
+th{
+    border:1px solid black;
+    background-color:#ff3300;
+    font-size:1.2em;
+    color:white;
+    padding:0.5%;
+}
+th[colspan]{
+    font-size:1.4em;
+    padding:1%;
+}
+th[colspan]>abbr{
+    font-weight:700;
+}
+th>abbr{
+    font-weight:600;
+}
+td>abbr{
+    font-weight:500;
+}
+td{
+    border:1px solid black;
+}
+#w3{
+    display:block;
+    margin-top:20px;
+}
+.w3schools{
+    text-decoration:none;
+    font-weight:500;
+    color:black;
+}
+
+    /*      Desafio 7   */
+
+.picture{
+    display:block;
+    margin:5% 0%;
+}
+.picture>img{
+    border-radius:5%;
+    box-shadow:20px 20px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+    /*      Desafio 8       */
+
+.d8{
+    width:40%;
+    height:60px;
+    margin:40px auto;
+    background-color:#6731da;
+    border:1px solid black;
+    border-radius:20px;
+    box-shadow:0px 10px 10px rgba(0, 0, 0, 0.3);
+    transition:0.1s;
+}
+.d8:hover{
+    background-color:#5b2cbe;
+}
+.d8:active{
+    box-shadow:0px 5px 5px rgba(0, 0, 0, 0.3);
+    transform:translatey(10%);
+}
+.d8 a{
+    text-decoration:none;
+    color:white;
+    font-size:1.4em;
+    font-weight:600;
+    line-height:55px;
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+    /*      Desafio 9   */
+
+.d9{
+    display:inline-block;
+    margin:3% 0%;
+    width:100%;
+    height:100%;
+}
+.d9>a{
+    display:inline-block;
+    margin:10px;
+    width:45%;
+}
+.d9>a>img{
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    border:2px solid black;
+    box-shadow:10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+    /*      Footer      */
+
+footer{
+    width:100%;
+    height:100%;
+    background-color:#0816dd;
+    color:white;
+    padding:0% 3%;
+    display:flex;
+}
+footer h1{
+    margin-bottom:5px;
+    font-weight:700;
+    background-color:inherit;
+}
+.criador{
+    width:60%;
+    display:flex;
+    padding:1%;
+}
+.criador img{
+    width:200px;
+    min-width:200px;
+    max-width:200px;
+    height:200px;
+    min-height:200px;
+    max-height:200px;
+    border:1px solid black;
+    border-radius:50%;
+    transform:translatey(18%);
+}
+.criador div{
+    margin-left:20px;
+}
+.criador p{
+    text-align:justify;
+    font-weight:500;
+}
+.redessociais{
+    width:40%;
+    padding:1% 1% 1% 4%;
+}
+.redessociais h1{
+    text-align:left;
+}
+.redessociais a{
+    margin-right:2%;
+}
+.redessociais img{
+    width:32px;
+    height:32px;
+    background-color:rgba(255,255,255,0.2);
+    border-radius:50%;
+}
+.redessociais img:hover{
+    background-color:#FFF;
+    border-radius:40%;
+}
