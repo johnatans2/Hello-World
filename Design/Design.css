@@ -306,8 +306,10 @@ header{
 /* Conteúdo Principal  */
 .mainprincipal{
     width:100%;
-    height:100%;
     padding:0%;
+    background-image:url("../Mídias/Imagens/Pagina-Principal/Background.webp");
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 .mainpart1{
     width:100%;
@@ -321,20 +323,48 @@ header{
     width:45%;
     margin-left:5%;
 }
-.mainprincipal p{
+.mainpart1 p{
     width:100%;
     display:inline-block;
     text-align:justify;
     font-family:'Marhey';
-    font-size:1.6em;
+    font-size:1.58em;
     font-weight:bolder;
     color:white;
-    transform:translate(15%,80%);
-    z-index:0;
+    transform:translate(18%,80%);
 }
 .mainpart1 img{
     width:100%;
     transform:translateY(0.55%);
+}
+.mainpart2{
+    display:flex;
+    padding:5% 5%;
+}
+.mainpart2 div{
+    width:50%;
+}
+.mainpart2 h1{
+    background-color:transparent;
+    font-size:2.4em;
+    color:#0817ff;
+    font-weight:bolder;
+    font-family:'Marhey';
+    margin-bottom:2%;
+    transform: translateY(70%);
+
+}
+.mainpart2 p{
+    text-align:justify;
+    font-family:'Marhey';
+    font-size:1.3em;
+    transform: translateY(20%);
+}
+.mainpart2 img{
+    width:80%;
+    border-radius:20px;
+    box-shadow:10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    margin:0% 10%;
 }
 main{
     width:85%;
