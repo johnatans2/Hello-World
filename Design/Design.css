@@ -331,7 +331,7 @@ header{
     font-size:1.58em;
     font-weight:bolder;
     color:white;
-    transform:translate(18%,80%);
+    transform:translate(18%,60%);
 }
 .mainpart1 img{
     width:100%;
@@ -350,7 +350,6 @@ header{
     color:#0817ff;
     font-weight:bolder;
     font-family:'Marhey';
-    margin-bottom:2%;
     transform: translateY(70%);
 
 }
@@ -359,6 +358,7 @@ header{
     font-family:'Marhey';
     font-size:1.3em;
     transform: translateY(20%);
+    margin-top:2%;
 }
 .mainpart2 img{
     width:80%;
@@ -366,10 +366,9 @@ header{
 }
 .mainpart3{
     width:100%;
-    height:500px;
+    height:100%;
     padding:5%;
-    background-color:#0817ff;
-    border:2px solid black;
+    background-color:rgb(255, 238, 0);
     background-image:url("../Mídias/Imagens/Pagina-Principal/bck.png");
     background-size:100%;
 }
@@ -389,6 +388,7 @@ header{
     font-size:1.3em;
     text-shadow:2px 1px black;
     margin-top:1%;
+    text-indent:1.5em;
 }
 main{
     width:85%;
