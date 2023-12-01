@@ -370,7 +370,7 @@ header{
     padding:5%;
     background-color:rgb(255, 238, 0);
     background-image:url("../Mídias/Imagens/Pagina-Principal/bck.png");
-    background-size:100%;
+    background-size:cover;
 }
 .mainpart3 h1{
     background-color:transparent;
